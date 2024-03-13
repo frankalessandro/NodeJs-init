@@ -1,4 +1,4 @@
-const pool = require("./db")
+const pool = require("./db2")
 
 const saludo = (req, res) => {
     res.send("<h1>Hola este es un saludo</h1>")
@@ -10,7 +10,7 @@ const usuarios = (req, res) => {
             res.status(500).json({ error: 'Error interno del servidor' });
             return;
         }
-        res.status(200).json(results);
+        res.status(200).json(results.rows);
     });
 };
 
